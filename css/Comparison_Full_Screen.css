@@ -1,0 +1,80 @@
+.addCar .selectedVariant {
+    opacity: 1;
+    margin-top: 16.5%!important;
+}
+.comparison .selectedVariant{
+	opacity: 1;
+}
+.detailsCompair .selectedVariant{
+	margin-top: 15.7%;
+}
+.addCar .detailsCompair img {
+    margin-left: 17px!important;
+}
+.chartsPart>.detailsCompair .backDashboard p{
+	display: inline;
+	margin-left: 4%;
+}
+.chartsPart>.detailsCompair .backDashboard p a, .chartsPart>.detailsCompair .backDashboard i{
+	color: #403e5b!important;
+	opacity: 0.5;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	padding: 8px 0;
+}
+.secondP{
+	margin-left: 0!important;
+}
+.chartsPart table .fa-caret-up{
+	color: #ec6d5c!important;
+}
+.chartsPart table .fa-caret-down{
+	color: #009c63!important;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.detailsCompair:nth-child(2) {
+    	width: 39%!important;
+	}
+	.addCar .detailsCompair img {
+    	margin-left: 4px!important;
+	}
+	.addCar .selectedVariant {
+	    margin-top: 26.5%!important;
+	}
+	.variantDiv .chartsPart {
+    	padding-top: 4%!important;
+	}
+	.detailsCompair .selectedVariant {
+    	margin-top: 25%;
+	}
+	.chartsPart table>tbody>tr>td{
+		padding: 10px 0!important;
+	}
+	.chartsPart .detailsCompair  table tr td i{
+		padding: 3px 0!important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.detailsCompair:nth-child(2) {
+    	width: 31%!important;
+	}
+	.chartsPart p{
+		text-align: center!important;
+		margin-bottom: 5%;
+	}
+	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+		text-align: center!important;
+	}
+	.selectedVariant, .addCar .selectedVariant{
+		margin-top: 5%!important;
+	}
+	.lightLogo>.navbar-brand{
+		padding: 5px 15px!important;
+	} 
+	
+}
+@media (min-width: 375px) and (max-width: 767px){
+	.addCar .detailsCompair img {
+    	margin-left: 13px!important;
+	}
+}

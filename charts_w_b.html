@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Charts without bootstrap</title>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/charts_w_b.css">
+	<link rel="stylesheet" href="css/charts.css">
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+</head>
+<body>
+<div class="empaty-large"></div>
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="header">
+					<div class="logo">
+						<img src="img/iCarDataDark.png" alt="light Logo">
+					</div>
+					<div class="menu">
+						<ul>
+							<li><a href="">Get Apps</a></li>
+							<li><a href="">Buy Plans</a></li>
+							<li><a href="">Feedback</a></li>
+							<li><a href="">Need Help?</a></li>
+							<li>
+								<img src="img\Functional/UserImage.png" alt="">
+							</li>
+							<li><a href="">Pedro Sstau &nbsp <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="clear"></div>
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+<div class="empaty-xl"></div>
+				<div class="sideBar">
+					<div class="searchDiv">
+						<input type="text" placeholder="Search Reports">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</div>
+					<ul>
+						<li>
+							<figure>
+								<img src="img\Icons\Dashboard\Menu/home2.png" alt="">
+							</figure>
+							<h4 class="active">Home</h4>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<figure>
+								<img src="img\Icons\Dashboard\Menu/deprecation1.png" alt="">
+							</figure>
+							<h4>Deprecation</h4>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<figure>
+								<img src="img\Icons\Dashboard\Menu/supplydemand1.png" alt="">
+							</figure>
+							<h4>Supply & Demand</h4>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<figure>
+								<img src="img\Icons\Dashboard\Menu/ranking1.png" alt="">
+							</figure>
+							<h4>Ranking</h4>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<figure>
+								<img src="img\Icons\Dashboard\Menu/geolocation1.png" alt="">
+							</figure>
+							<h4>Geolocation</h4>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<figure>
+								<img src="img\Icons\Dashboard\Menu/marketprice1.png" alt="">
+							</figure>
+							<h4>Market Price</h4>
+							<div class="clear"></div>
+						</li>
+<div class="clear"></div>
+					</ul>
+				</div>
+				<div class="charts">
+					<ul>
+						<li><a href="">Make</a></li>
+						<li><a href="">Model</a></li>
+						<li><a href="">Variant</a></li>
+						<li><a href="">Year</a></li>
+						<li><a href="">Territory</a></li>
+<div class="clear"></div>
+					</ul>
+					<div class="selectedItems">
+						
+					</div>
+					<div class="selectOption">
+						<select name="make" id="makeAuto">
+							<option value="select">Select</option>
+						</select>
+						<select name="variant" id="variantAuto">
+							<option value="select">Select</option>
+						</select>
+						<select name="territory" id="territoryAuto">
+							<option value="select">Select</option>
+						</select>
+						<select name="model" id="modelAuto" value="select">
+							<option value="select">Select</option>
+						</select>
+						<select name="year" id="yearAuto">
+							<option value="select">Select</option>
+						</select>
+						<button>Applay Filter</button>
+					</div>
+					<div class="chartsPart">
+						<div class="detailsdiv">
+							<button>More Details</button>
+							<!-- <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+							<i class="fa fa-download fa-2x" aria-hidden="true"></i> -->
+							<p class="text-center">No. of Listings</p>
+						</div>
+						<div id="Deprecation" style="width:100%;">
+						</div>
+					</div>
+					<div class="chartsPart">
+						<div class="detailsdiv">
+							<button>More Details</button>
+							<i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+							<i class="fa fa-download fa-2x" aria-hidden="true"></i>
+							<p class="text-center">No. of Listings</p>
+						</div>
+						<div id="Supply" style="width:100%;">
+						</div>
+					</div>
+				</div>
+<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		Highcharts.chart('Deprecation', {
+    chart: {
+        zoomType: 'spline',
+        marginTop:100
+    },
+    title: {
+        text: 'Deprecation of Audi A4 Over Time',
+        align:"left",
+
+    },
+     
+     
+    
+    xAxis: [{
+        categories: ['2017','2016','<p style="color:#009c63;font-weight:600">'+2015+'</p>', '2014', '2013', '2012', '2011'],
+        title: {
+            text: 'Year'
+        }
+        
+    }],
+    yAxis: [{ // Primary yAxis
+    	reversed: true,
+        labels: {
+            format: '{value}k',
+            
+        },
+        title: {
+            text: 'Price in RAM',
+            
+        },
+       
+    },],
+     tooltip: {
+        headerFormat: '<b>{series.name}</b><br>',
+        pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+    },
+    
+    series: [ {
+        data: [/*90, 60, 40, 25,15, 10,7.5*/10,50,{y:70,color:'#009c63'},75,80,85,],
+        name: 'Deprecation',
+
+        color: '#403e5b',
+
+    }]
+});
+
+(function (H) {
+    H.wrap(H.seriesTypes.column.prototype, 'translate', function (proceed) {
+        var options = this.options,
+            rTopLeft = options.borderRadiusTopLeft || 0,
+            rTopRight = options.borderRadiusTopRight || 0,
+            rBottomRight = options.borderRadiusBottomRight || 0,
+            rBottomLeft = options.borderRadiusBottomLeft || 0;
+
+        proceed.call(this);
+
+        if (rTopLeft || rTopRight || rBottomRight || rBottomLeft) {
+            H.each(this.points, function (point) {
+                var shapeArgs = point.shapeArgs,
+                    w = shapeArgs.width,
+                    h = shapeArgs.height,
+                    x = shapeArgs.x,
+                    y = shapeArgs.y;
+                point.shapeType = 'path';
+                point.shapeArgs = [
+                    'M', x + rTopLeft, y,
+                    // top side
+                    'L', x + w - rTopRight, y,
+                    // top right corner
+                    'C', x + w - rTopRight / 2, y, x + w, y + rTopRight / 2, x + w, y + rTopRight,
+                    // right side
+                    'L', x + w, y + h - rBottomRight,
+                    // bottom right corner
+                    'C', x + w, y + h - rBottomRight / 2, x + w - rBottomRight / 2, y + h, x + w - rBottomRight, y + h,
+                    // bottom side
+                    'L', x + rBottomLeft, y + h,
+                    // bottom left corner
+                    'C', x + rBottomLeft / 2, y + h, x, y + h - rBottomLeft / 2, x, y + h - rBottomLeft,
+                    // left side
+                    'L', x, y + rTopLeft,
+                    // top left corner
+                    'C', x, y + rTopLeft / 2, x + rTopLeft / 2, y, x + rTopLeft, y,
+                    'Z'
+                ];
+                    
+            });
+        }
+    });
+}(Highcharts));
+
+Highcharts.chart('Supply', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: 'Supply & Demand of Audi A4',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','35k', '55k', '75k', '<p style="color:#009c63;font-weight:600">'+'95k'+'</p>', '115k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: 'No of CTR',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    
+    
+    series: [
+   
+    {
+        name: 'Supplay',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,  15, 22, 29.5, {y:36.4, color:'#009c63'},34],
+        
+    },  
+    {
+        name: 'Supplay',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,12,25,32,29,11],
+
+    },
+
+
+    {
+        name: 'Demand',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,35,2,20,40,8],
+        
+    }]
+});
+
+
+	</script>
+</body>

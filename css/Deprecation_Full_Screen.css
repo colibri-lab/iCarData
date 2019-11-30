@@ -1,0 +1,56 @@
+.chartsPart{
+	margin-bottom: 0.7%!important;
+}
+.depFullScreen table tr th{
+	border: 1px solid white!important;
+	font-size: 13px;
+	color: #403e5b;
+	opacity: 0.5;
+	text-align: center;
+}
+.detailsCompair img{
+	margin-top: -10%;
+}
+.detailsCompair i{
+	color: #403e5b!important;
+	opacity: 0.8;
+}
+.first td{
+	font-size: 15px;
+	color: #403e5b;
+	opacity: 0.8;
+	font-family: 'AvenirNextLTProRegular';
+	text-align: center;
+}
+.activeRow td{
+	font-weight: 500;
+	color: #009c63;
+	font-family:'AvenirNextLTProMedium';
+	text-align: center;
+}
+.depFullScreen table .fa-caret-down{
+	color: #ec6d5c!important;
+}
+.depFullScreen table .fa-caret-up{
+	color: #009c63!important;
+}
+.variables h5{
+	font-size: 15px;
+	color: #403e5b;
+}
+@media (max-width: 1199px) and (min-width: 992px){
+	.table>tbody:first-child>tr>th {
+    	padding: 18px!important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	#detailsCompairDep{
+	    width: 100%!important;
+    	margin-top: 3%;
+	}
+}
+@media (min-width: 375px) and (max-width: 767px){
+	.addCar h5{
+		margin-left: 25%!important;
+	}
+}

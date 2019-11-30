@@ -1,0 +1,14 @@
+table{
+	margin-top: 20%;
+}
+table tr td{
+	padding:15px!important;
+}
+.row .chartsPart{
+	margin: 0!important;
+	border-radius: 10px!important;
+
+}
+.clear{
+	clear: both;
+}

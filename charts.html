@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Charts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main_test.css">
+		<link rel="stylesheet" href="css/charts.css">
+
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">		
+
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+
+	<!--  AngularJs -->
+		<!-- <script src="js/angular.min.js"></script> -->
+    	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+		
+		
+
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+
+<script src="https://rawgithub.com/phpepe/highcharts-regression/master/highcharts-regression.js">
+
+
+</script>
+
+	
+		
+</head>
+<body ng-app="myModule">
+		<div class="conatiner-fluid navBarCharts">
+			<div class="container">
+<div class="empaty-small"></div>
+			<div class="row">
+				<nav class="navbar">
+				  	<div class="container-fluid">
+				    	<div class="navbar-header">
+						    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span> 
+						    </button> -->
+				      		<a class="navbar-brand" href="index.html"><img src="img/iCarDataDark.png" alt=""></a>
+				    	</div>
+				    	<div class="navbar-collapse pull-right" id="myNavbar">
+<div class="empaty-small"></div>
+						    <ul class="nav navbar-nav pull-right">
+						        <li><a href="#">Get Apps</a></li>
+						        <li>
+							        <!-- Large modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Buy Plans</button>
+								</li>
+<!-- modal window -->
+<div class="modal fade bs-example-modal-lg modalWindow" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content ourPlans">
+      	<div class="modal-header">
+<div class="empaty-large"></div>
+			<button class="pull-right closeButton"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+			<div class="row">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md -offset-3 col-sm-6 col-sm-offset-3">
+					<h1 class="text-center">Our Plans</h1>
+					<h4 class="text-center">Choose what suits your business needs best.</h4>
+				</div>
+			</div>
+        </div>
+        <div class="modal-body">		
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 ">
+					<div class="row"> 
+						<div class="col-md-4 col-md-offset-2  col-sm-4 col-sm-offset-2  payPer">
+<div class="empaty-large"></div>
+							<h3>Pay per API Call</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$100<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Pay on demand when you make request to our API</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+<div class="clear"></div>
+						</div>
+						<div class="col-md-4 col-md-offset-2 col-sm-4   annualSubscribe">
+<div class="empaty-large"></div>
+							<h3>Annual Subscription</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$200<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Make as many API requests as you want without limits</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+											</div>
+				</div>
+			</div>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+		</div>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<h4 class="text-center">
+						We work with Banks, Insurance Companies, Manufacturers, Press, Investors  providing them with actionable information that changes the way they do business.
+					</h4>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+					<button type="button" class="btn btn-default mainButton " id="popUpButton">START FREE TRIAL NOW</button>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+						        <li><a href="#">Feedback</a></li> 
+						        <li><a href="#">Need Help?</a></li> 
+						        <li><a href="#" style="padding-right: 0;padding-top: 0" class="userImage"><img src="img/Functional/UserImage.png" alt="user img" > </a> </li> 
+						        <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Sttau</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+    <ul class="dropdown-menu profileInfo">
+  	<div class="arrow"></div>
+    <li><a href="profile.html">My Profile</a></li>
+    <li><a href="profile_s.html">Choose Plan</a></li>
+    <li><a href="profile_s.html">Payment Method</a></li>
+    <li><a href="#">Log Out</a></li>
+<div class="clear"></div>
+  </ul>
+</div>
+    </ul>
+				    	</div>				     
+				  	</div>
+				</nav>
+			</div>
+<div class="empaty-large hidden-xs "></div>			
+<div class="empaty-large hidden-xs "></div>
+<div class="empaty-small hidden-xs "></div>
+		</div>
+	</div>
+<div class="empaty-large hidden-xs "></div>
+<div class="empaty-medium hidden-xs "></div> 
+<div class="empaty-small hidden-xs "></div> 
+	<div class="container-fluid makeModel" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12">
+					<div class="searchModel">
+						<input type="text" id="search-criteria"  placeholder="Search reports" ng-model="searchText.name">
+						<i class="fa fa-search " aria-hidden="true"></i>
+					</div>
+<div class="empaty-large"></div>					
+<div class="empaty-large"></div>	
+					<div class="panel-group sideBar" id="accordion"   role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<figure>
+										<img src="img\Icons\Dashboard\Menu/home2.png" alt="home">
+									</figure> 
+							        <a role="button" class="chartsMenuActive" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Home
+							        </a>
+							    </h4>
+							</div>
+						</div>
+						  	<div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      	<h4 class="panel-title">
+							      		<figure>
+											<img src="img/menuIcons/deprecation.png" alt="deprecation">
+										</figure> 
+							        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							          		Deprecation
+							        	</a>
+							      	</h4>
+							    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      	<div class="panel-body">
+									<a href="#">- Deprecation by Model</a>
+<div class="empaty-small"></div>
+									<a href="#">- Deprecation by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/supply&demand.png" alt="supply&demand">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          		Supply & Demand
+						        	</a>
+						      	</h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      	<div class="panel-body">
+									<a href="#">- Supply & Demand by Model</a>   
+<div class="empaty-small"></div>
+									<a href="#">- Supply & Demand by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/comparisons.png" alt="Raking">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Raking
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/geolocation.png" alt="geolocation">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse"  aria-expanded="false">
+						          		Geolocation
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/market price.png" alt="market price">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Market Price
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12">
+					<nav class="navbar" style="margin-bottom: 30px">
+					    <ul class="nav navbar-nav pull-right select-menu">
+					        <li class="makeLi activCarChoose"><a href="#">Make</a></li>
+					        <li class="modelLi disabled"><a href="#">Model</a></li>
+					        <li class="variantLi disabled"><a href="#">Variant</a></li> 
+					        <li class="yearLi disabled"><a href="#">Year</a> </li> 
+					        <li class="territoryLi disabled"><a href="#">Territory</a> </li> 
+					    </ul>
+					</nav>
+					<div class="row makeDiv">
+						<div class="col-lg-12 col-md-12">
+							<div class="make">
+								<input type="text" placeholder="Search make" class="pull-left" id="search-criteria-menu">
+								
+								<div class="clear"></div>
+								<i class="fa fa-search" aria-hidden="true"></i>
+								<ul></ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row selectedItems">
+						<div class="col-lg-12 col-md-12">
+							<div class="applied">
+								<p>
+									<img src="img\Icons\Dashboard\Filter/selected.png" alt="">Applied:
+								</p>
+								<p class="car">
+									<img src="img\Icons\Dashboard\Filter/car.png" alt="">
+									<span class="spanMake"></span>
+									<span class="spanModel"></span>
+									<span class="spanVariant"></span>
+								</p>
+								<p class="year">
+									<img src="img\Icons\Dashboard\Filter/year.png" alt="">
+									<span></span>
+								</p>
+								<p class="territory">
+									<img src="img\Icons\Dashboard\Filter/territory.png" alt="">
+									<span></span>
+								</p>
+								<button>CHANGE</button>
+<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="audi">
+								
+							</div>
+							<div class="selectOptions">
+								<select name="make" id="makeAuto" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<select name="variant" id="variantAuto" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<select name="territory" id="territoryAuto" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<select name="model" id="modelAuto" value="select" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<select name="year" id="yearAuto" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<button class = "btn btn-default">Applay Filter</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row charts">
+						<div class="col-lg-12 col-md-12">
+							<div >
+								<div class="chartsPart">
+									<div class="detailsdiv">
+										<button><a href="chart_depreciation_model.html">More Details</a></button>
+										<!-- <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i>
+										<i class="fa fa-download fa-2x" aria-hidden="true"></i> -->
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+										
+									</div>
+									<div id="Deprecation" style="width:100%;">
+									</div>
+								</div>
+								<div class="chartsPart">
+									<div class="detailsdiv">
+										<button>More Details</button>
+										
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+										
+									</div>
+									<div id="Supply" style="width:100%;">
+
+									</div>
+								</div>
+								<div class="row chartsPart raking">
+									<div class="makeRanking col-lg-4 col-md-4">
+										<p><span>Make</span> Ranking</p>
+										
+										<img src="img\Icons\Dashboard/question.png" alt="question">
+										<div>
+											<button><p class="pull-left">Audi</p> <span class="pull-right">13th</span></button>
+											<button><p class="pull-left">BMW</p> <span class="pull-right">1st</span></button>
+											<button><p class="pull-left">Honda</p> <span class="pull-right">2nd</span></button>
+											<button><p class="pull-left">Toyota</p> <span class="pull-right">3th</span></button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+									<div class="modelRanking col-lg-4 col-md-4">
+										<p><span>Model</span> Ranking</p>
+										<img src="img\Icons\Dashboard/question.png" alt="question">
+										<div>
+											<button><p class="pull-left">Audi</p> <span class="pull-right">13th</span></button>
+											<button><p class="pull-left">BMW</p> <span class="pull-right">1st</span></button>
+											<button><p class="pull-left">Honda</p> <span class="pull-right">2nd</span></button>
+											<button><p class="pull-left">Toyota</p> <span class="pull-right">3th</span></button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+										<div class="variantRanking col-lg-4 col-md-4">
+											<p><u>Variant</u> Ranking</p>
+											<img src="img\Icons\Dashboard/question.png" alt="question">
+										<div>
+											<button><p class="pull-left">Audi</p> <span class="pull-right">13th</span></button>
+											<button><p class="pull-left">BMW</p> <span class="pull-right">1st</span></button>
+											<button><p class="pull-left">Honda</p> <span class="pull-right">2nd</span></button>
+											<button><p class="pull-left">Toyota</p> <span class="pull-right">3th</span></button>
+											<button class="showButton">Show more</button>
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="chartsPart">
+									<div class="detailsdiv">
+										<button>More Details</button>
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+									</div>
+									<div id="avgMarketPrice" style="width: 100%">
+										
+									</div>
+								<div class="clear"></div>
+								</div>
+								<div class="chartsPart">
+									<div class="detailsdivGeo">
+										<p class="pull-left"><u>Geolocation of Audi A4 2012</u></p>
+										<button>More Details</button>
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+									</div>
+									
+									<div id="chart_div" style="width: 100%">
+										
+									</div> 
+								<div class="clear"></div>
+								</div>
+								<div class="chartsPart">
+									<div class="detailsdiv">
+										<button>More Details</button>
+										
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+									</div>
+									<div id="marketPrice" style="width:100%">
+										
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="container-fluid makeDecisions">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-offset-xs-2">
+						<h2>Make smarter decisions today.</h2>
+					</div>
+				</div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  message">
+									<input type="name" class="form-control pull-left" id="exampleInputEmail3" placeholder="Name">
+									<input type="company" class="form-control pull-left" id="exampleInputEmail3" placeholder="Company">
+									<input type="email" class="form-control pull-left" id="exampleInputEmail3" placeholder="Email">
+									<textarea class="form-control" rows="5" placeholder="New Message"></textarea>
+									<div>
+										<img src="img/Functional/SendEmail.png" alt="sent message">
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 lightLogo">
+								<a class="navbar-brand" href="#"><img src="img/iCarDataLight.png" alt="Logo Light" ></a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>FEATURES</p>
+								<ul>
+									<li><a href="#">Market Demand</a></li>
+									<li><a href="#">Pricing & Deprecatio</a>n</li>
+									<li><a href="#">Geolocation</a></li>
+									<li><a href="#">Market Reports</a> </li>
+								</ul>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>COMPANY</p>
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Press Room</a></li>
+									<li><a href="#">Investor Relations</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<p>RESOURCES</p>
+								<ul>
+									<li><a href="#">Help Center</a></li>
+									<li><a href="#">Personal Data Protection</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>					
+				</div>
+<div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-4 copy-right">
+						
+					</div>
+					<div class="col-lg-4 col-lg-offset-4 col-md-6  col-sm-6  col-xs-6   conditions">
+						<p ><a href="">Terms & Conditions·  Privacy Policy</a></p>
+<div class="clear"></div>
+					</div>
+				</div>
+<div class="empaty-large"></div>
+			</div>
+		</div>
+		
+
+	
+  <script src="js/script_search.js"></script> 
+ <script>
+			$(document).ready(function(){
+/*date and copy right*/
+
+	   		var date=new Date(),
+	        year = date.getFullYear(),
+	       	text = "Copyright " + year + " iCarData.com. All rights reserved.";
+	        
+	        $('.copy-right').html('<p class="text-align-left">' + text + '</p>');
+/*choose subscribe method*/
+
+			$('.payPer').on('click', function(){
+		    		$('.annualSubscribe.activePayAnnual').removeClass('activePayAnnual');
+		    		$(this).addClass('activePayAnnual');
+				});
+
+	        $('.annualSubscribe').on('click', function(){
+		    		$('.payPer.activePayAnnual').removeClass('activePayAnnual');
+		    		$(this).addClass('activePayAnnual');
+				});
+
+
+$(function() {
+  $('#Deprecation').highcharts({
+    chart: {
+      type: 'scatter',
+      zoomType: 'xy',
+      marginTop:100
+
+    },
+    title: {
+      text: '<p style="text-decoration:underline;font-family: AvenirNextLTProMedium">Deprecation of Audi A4 Over Time</p>',
+        align:"left",
+        y:5
+    },
+    
+    xAxis: {
+      title: {
+        enabled: true,
+        text: 'Year'
+      },
+      startOnTick: true,
+      endOnTick: true,
+      showLastLabel: true
+    },
+    yAxis: {
+      title: {
+        text: 'Pricing (RM)'
+      }
+    },
+    legend: {
+      layout: 'horizontal',
+      align: 'right',
+      verticalAlign: 'top',
+      x: 0,
+      y: 40,
+      floating: true,
+      backgroundColor: '#FFFFFF',
+      
+    },
+    plotOptions: {
+      scatter: {
+        marker: {
+          radius: 5,
+          states: {
+            hover: {
+              enabled: true,
+              lineColor: 'rgb(100,100,100)'
+            }
+          }
+        },
+        states: {
+          hover: {
+            marker: {
+              enabled: false
+            }
+          }
+        },
+        tooltip: {
+          headerFormat: '<b>{series.name}</b><br>',
+          pointFormat: '{point.x} cm, {point.y} kg'
+        }
+      }
+    },
+     credits: {
+        enabled: false
+    },
+    series: [{
+      regression: true,
+      regressionSettings: {
+        type: 'linear',
+        color: '#403e5b',
+        name: 'No. of Listings',
+
+      },
+      name: 'Audi A4 Price',
+      type:'bubble',
+      marker:{
+	            lineColor: '#403e5b',
+	            fillColor: 'white'
+             },
+      data: [{
+        x: 2011,
+        y: 10,
+        z: 13.8
+      }, {
+        x: 2012,
+        y: 35,
+        z: 14.7
+      }, {
+        x: 2013,
+        y: 48,
+        z: 15.8
+      }, {
+        x: 2014,
+        y: 53,
+        z: 12
+      }, {
+        x: 2015,
+        y: 68.3,
+        z: 11.8
+      }, {
+        x: 2016,
+        y: 78.9,
+        z: 16.6
+      }, {
+        x: 2017,
+        y: 92.5,
+        z: 14.5
+      },]
+ 
+
+
+    }]
+  });
+});
+
+
+/*Highcharts.chart('Deprecation', {
+    chart: {
+        zoomType: 'spline',
+        marginTop:100
+    },
+    title: {
+        text:'<p style="text-decoration:underline">Deprecation</p> of Audi A4 Over Time',
+        align:"left",
+    },
+    
+    xAxis: [{
+        categories: ['2017','2016','<p style="color:#009c63;font-weight:600">'+2015+'</p>', '2014', '2013', '2012', '2011'],
+        title: {
+            text: 'Year',
+
+        }
+        
+    }],
+    yAxis: [{ // Primary yAxis
+    	reversed: true,
+        labels: {
+            format: '{value}k',
+            
+        },
+        title: {
+            text: '',
+            
+        },
+               
+    },],
+     tooltip: {
+        headerFormat: '<b>Year:{point.x}</b><br>',
+        pointFormat: '{series.name}: RM {point.y}k'
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 50,
+        floating: true,
+        borderWidth:0,
+       
+    },
+     credits: {
+        enabled: false
+    },
+    series: [ {
+        data: [10,50,{y:75,color:'#009c63'},77,80,85,90],
+        name: 'No. of Listings',
+        color: '#403e5b',
+    }]
+});*/
+
+
+
+(function (H) {
+    H.wrap(H.seriesTypes.column.prototype, 'translate', function (proceed) {
+        var options = this.options,
+            rTopLeft = options.borderRadiusTopLeft || 0,
+            rTopRight = options.borderRadiusTopRight || 0,
+            rBottomRight = options.borderRadiusBottomRight || 0,
+            rBottomLeft = options.borderRadiusBottomLeft || 0;
+
+        proceed.call(this);
+
+        if (rTopLeft || rTopRight || rBottomRight || rBottomLeft) {
+            H.each(this.points, function (point) {
+                var shapeArgs = point.shapeArgs,
+                    w = shapeArgs.width,
+                    h = shapeArgs.height,
+                    x = shapeArgs.x,
+                    y = shapeArgs.y;
+                point.shapeType = 'path';
+                point.shapeArgs = [
+                    'M', x + rTopLeft, y,
+                    // top side
+                    'L', x + w - rTopRight, y,
+                    // top right corner
+                    'C', x + w - rTopRight / 2, y, x + w, y + rTopRight / 2, x + w, y + rTopRight,
+                    // right side
+                    'L', x + w, y + h - rBottomRight,
+                    // bottom right corner
+                    'C', x + w, y + h - rBottomRight / 2, x + w - rBottomRight / 2, y + h, x + w - rBottomRight, y + h,
+                    // bottom side
+                    'L', x + rBottomLeft, y + h,
+                    // bottom left corner
+                    'C', x + rBottomLeft / 2, y + h, x, y + h - rBottomLeft / 2, x, y + h - rBottomLeft,
+                    // left side
+                    'L', x, y + rTopLeft,
+                    // top left corner
+                    'C', x, y + rTopLeft / 2, x + rTopLeft / 2, y, x + rTopLeft, y,
+                    'Z'
+                ];
+                    
+            });
+        }
+    });
+}(Highcharts));
+
+
+Highcharts.chart('Supply', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '<p style="text-decoration:underline; font-family: AvenirNextLTProMedium">Supply & Demand of Audi A4</p>',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','35k', '55k', '75k', '<p style="color:#009c63;font-weight:600">'+'95k'+'</p>', '115k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 50,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: 'No of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,  15, 22, 29.5, 34,40],
+        
+    },  
+   {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,  0, 0, 0, {y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,12,25,32,29,11],
+
+    },
+
+
+    {
+        name: 'No. of Listings',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,35,2,20,40,8],
+        
+    }]
+       
+});
+
+/*var chart = Highcharts.chart('Geolocation', {
+	type: 'bar',
+    title: {
+        text: 'Chart.update'
+    },
+
+    subtitle: {
+        text: 'Plain'
+    },
+    legend: {
+        reversed: true
+    },
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    series: [{
+        
+
+        colorByPoint: true,
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        showInLegend: false
+    }]
+
+});*/
+
+/*Highcharts.chart('Geolocation', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Stacked bar chart',
+        align:"left"
+    },
+    xAxis: {
+        categories: ['Malaysia', 'Thailand', 'Indonesia', 'Singapore', 'Philippines']
+    },
+    yAxis: {
+        min: 0,
+       
+    },
+   
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        }
+    },
+    series: [{
+        name: 'John',
+        colorByPoint: true,
+        data: [10,8,6,4,2]
+    }]
+});*/
+
+
+
+Highcharts.chart('avgMarketPrice', {
+    chart: {
+        type: 'bar',
+        marginTop:100
+
+    },
+    title: {
+        text: '<p style="text-decoration:underline;font-family: AvenirNextLTProMedium">Geolocation of Audi A4 2012</p>',
+         align:"left",
+         y: 5 
+    },
+    
+    xAxis: {
+        categories: ['Kuala-Lumpur', 'Penang', 'Selangor', 'Perak', 'Johor'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: '',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: 'Avg Market Price'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 40,
+        floating: true,
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+    	name:'Avg. Market Price',
+        color:'#F0F8FF',
+        borderColor:'#403e5b',
+        data: [{y:700, color:'#009c63'}, 31, 635, 203, 100]
+    },]
+});
+
+/*geocharts*/
+
+google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Popularity'],
+          ['Malaysia', 200],
+          ['Thailand', 300],
+          ['Indonesia', 400],
+          ['Singapore', 500],
+          ['Philippines', 600],
+        ]);
+
+        var options = {
+        	region: 142,
+        	datalessRegionColor: '#55536C',
+        	colorAxis: {colors: ['#009C63','#ffC000']}
+
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+
+
+
+
+
+
+
+ Highcharts.chart('marketPrice', {
+    chart: {
+        type: 'column',
+    	marginTop:100,
+    },
+    title: {
+        text: '<p style="text-decoration:underline;font-family: AvenirNextLTProMedium">Market Price of Audi A4 Over Time</p>',
+        align:"left"
+    },
+    xAxis: {
+        categories: ['2011','2012', '2013', '2014', '2015', '2016', '2017'],
+        title: {
+            text: 'Year',
+
+        }
+    },
+    yAxis: {
+    	reversed: true, 
+        min: 10,
+        title: {
+            text: ''
+        }
+    },
+    legend: {
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: 0,
+        y: 50,
+        floating: true,
+        borderWidth:0,
+       
+    },
+     credits: {
+        enabled: false
+    },
+    tooltip: {
+        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+        shared: true
+    },
+    plotOptions: {
+        column: {
+            stacking: 'percent'
+        }
+    },
+    series: [{
+        name: 'Min Price',
+    	minRange: 10,
+    	color:"rgba(0, 155, 98, 0.5)",
+        data: [35,15,8,9,28,24,29]
+    }, 
+    {
+    	
+        name: 'Avg. Market Price',
+        color:' rgba(64, 62, 91, 0.25)',
+        data: [9,5,14,8,22,22,12]
+    },
+    {
+    	
+        name: 'Max Price',
+        color:' rgba(0, 155, 98, 0.75)',
+        data: [9,5,14,8,22,22,12]
+    },
+    {
+    	borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        name: 'Demand Price',
+        color:'#009b63',
+        data: [9,5,14,10,18,22,6]
+    }
+
+    ]
+});
+
+
+
+
+
+
+ 
+
+
+})
+
+
+ </script>
+</body>
+</html>

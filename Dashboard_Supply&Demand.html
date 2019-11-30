@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Charts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main_test.css">
+		<link rel="stylesheet" href="css/charts.css">
+		<link rel="stylesheet" href="css/Dashboard_Supply&Demand.css">
+		<link rel="stylesheet" href="css/chart_depreciation_variant.css">
+
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+	<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">		
+
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+
+	<!--  AngularJs -->
+		<!-- <script src="js/angular.min.js"></script> -->
+    	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://rawgithub.com/phpepe/highcharts-regression/master/highcharts-regression.js">
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+ 
+		<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+	
+		
+</head>
+<body ng-app="myModule">
+		<div class="conatiner-fluid navBarCharts">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-small"></div>
+			<div class="row">
+				<nav class="navbar">
+				  	<div class="container-fluid">
+				    	<div class="navbar-header">
+						    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span> 
+						    </button> -->
+				      		<a class="navbar-brand" href="#"><img src="img/iCarDataDark.png" alt=""></a>
+				    	</div>
+				    	<div class="navbar-collapse pull-right" id="myNavbar">
+<div class="empaty-small"></div>
+						    <ul class="nav navbar-nav pull-right">
+						        <li><a href="#">Get Apps</a></li>
+						        <li>
+							        <!-- Large modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Buy Plans</button>
+								</li>
+<!-- modal window -->
+<div class="modal fade bs-example-modal-lg modalWindow" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content ourPlans">
+      	<div class="modal-header">
+<div class="empaty-large"></div>
+			<button class="pull-right closeButton"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+			<div class="row">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md -offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+					<h1 class="text-center">Our Plans</h1>
+					<h4 class="text-center">Choose what suits your business needs best.</h4>
+				</div>
+			</div>
+        </div>
+        <div class="modal-body">		
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="row"> 
+						<div class="col-md-4 col-md-offset-2  col-sm-4 col-sm-offset-2 col-xs-6 col-xs-offset-3 payPer">
+<div class="empaty-large"></div>
+							<h3>Pay per API Call</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$100<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Pay on demand when you make request to our API</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+						<div class="col-md-4 col-md-offset-2 col-sm-4 col-xs-6 col-offset-xs-3  annualSubscribe">
+<div class="empaty-large"></div>
+							<h3>Annual Subscription</h3>
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>	
+							<h2>$200<span>/Mo</span></h2>	
+<div class="empaty-medium"></div>						
+<div class="empaty-small"></div>
+							<p>Make as many API requests as you want without limits</p>
+<div class="empaty-large"></div>						
+<div class="empaty-small"></div>
+							<button class="btn btn-default">SUBSCRIBE</button>
+<div class="empaty-large"></div>
+						</div>
+											</div>
+				</div>
+			</div>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+		</div>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<h4 class="text-center">
+						We work with Banks, Insurance Companies, Manufacturers, Press, Investors  providing them with actionable information that changes the way they do business.
+					</h4>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+					<button type="button" class="btn btn-default mainButton">START FREE TRIAL NOW</button>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+						        <li><a href="#">Feedback</a></li> 
+						        <li><a href="#">Need Help?</a></li> 
+						        <li><a href="#" style="padding-right: 0;padding-top: 0"><img src="img/Functional/UserImage.png" alt="user img"> </a> </li> 
+						        <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pedro Sttau</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+   <ul class="dropdown-menu profileInfo">
+  	<div class="arrow"></div>
+	    <li><a href="profile.html">My Profile</a></li>
+	    <li><a href="profile_s.html">Choose Plan</a></li>
+	    <li><a href="profile_s.html">Payment Method</a></li>
+	    <li><a href="#">Log Out</a></li>
+<div class="clear"></div>
+  	</ul>
+</div>
+						    </ul>
+				    	</div>				     
+				  	</div>
+				</nav>
+			</div>
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+			
+<div class="empaty-large"></div>
+<div class="empaty-small"></div>
+
+		</div>
+<div class="clear"></div>
+	</div>
+<div class="empaty-large"></div>
+<div class="empaty-medium"></div> 
+<div class="empaty-small"></div> 
+	<div class="container-fluid makeModel" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12" >
+					<div class="searchModel">
+						<input type="text" id="search-criteria"  placeholder="Search reports" ng-model="searchText.name">
+						<i class="fa fa-search " aria-hidden="true"></i>
+					</div>
+<div class="empaty-large"></div>					
+<div class="empaty-large"></div>	
+					<div class="panel-group sideBar" id="accordion"   role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<figure>
+										<img src="img/menuIcons/home.png" alt="home">
+									</figure> 
+							        <a role="button" class="" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Home
+							        </a>
+							    </h4>
+							</div>
+						</div>
+						  	<div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      	<h4 class="panel-title">
+							      		<figure>
+											<img src="img/menuIcons/deprecation.png" alt="deprecation">
+										</figure> 
+							        	<a class="collapsed " role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							          		Deprecation
+							        	</a>
+							      	</h4>
+							    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      	<div class="panel-body">
+									<a href="chart_depreciation_model.html" class="chartsMenuActive">- Deprecation by Model</a>
+<div class="empaty-small"></div>
+									<a href="#">- Deprecation by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/supply&demandactive.png" alt="supply&demand">
+									</figure> 
+						        	<a class="collapsed chartsMenuActive" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          		Supply & Demand
+						        	</a>
+						      	</h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      	<div class="panel-body">
+									<a href="#">- Supply & Demand by Model</a>   
+<div class="empaty-small"></div>
+									<a href="#">- Supply & Demand by Variant</a>
+						      	</div>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/comparisons.png" alt="Raking">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Raking
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/geolocation.png" alt="geolocation">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse"  aria-expanded="false">
+						          		Geolocation
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab">
+						      	<h4 class="panel-title">
+						      		<figure>
+										<img src="img/menuIcons/market price.png" alt="market price">
+									</figure> 
+						        	<a class="collapsed" role="button" data-toggle="collapse" aria-expanded="false">
+						          		Market Price
+						        	</a>
+						      	</h4>
+						    </div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12" >
+					<nav class="navbar" style="margin-bottom: 30px">
+					    <ul class="nav navbar-nav pull-right select-menu">
+					        <li class="makeLi activCarChoose"><a href="#">Make</a></li>
+					        <li class="modelLi disabled"><a href="#">Model</a></li>
+					        <li class="variantLi disabled"><a href="#">Variant</a></li> 
+					        <li class="yearLi disabled"><a href="#">Year</a> </li> 
+					        <li class="territoryLi disabled"><a href="#">Territory</a> </li> 
+<div class="clear"></div>
+					    </ul>
+					</nav>
+					<div class="row makeDiv">
+						<div class="col-lg-12">
+							<div class="make">
+								<input type="text" placeholder="Search make" class="pull-left" id="search-criteria-menu">
+								
+								<div class="clear"></div>
+								<i class="fa fa-search" aria-hidden="true"></i>
+								<ul></ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row selectedItems">
+						<div class="col-lg-12 col-md-12">
+							<div class="applied">
+								<p>
+									<img src="img\Icons\Dashboard\Filter/selected.png" alt="">Applied:
+								</p>
+								<p class="car">
+									<img src="img\Icons\Dashboard\Filter/car.png" alt="">
+									<span class="spanMake"></span>
+									<span class="spanModel"></span>
+									<span class="spanVariant"></span>
+								</p>
+								<p class="year">
+									<img src="img\Icons\Dashboard\Filter/year.png" alt="">
+									<span></span>
+								</p>
+								<p class="territory">
+									<img src="img\Icons\Dashboard\Filter/territory.png" alt="">
+									<span></span>
+								</p>
+								<button>CHANGE</button>
+<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="audi">
+								
+							</div>
+							<div class="selectOptions">
+								<select name="make" id="makeAuto" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<select name="variant" id="variantAuto" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<select name="territory" id="territoryAuto" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<select name="model" id="modelAuto" value="select" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<select name="year" id="yearAuto" class="form-control">
+									<option value="select">Select</option>
+								</select>
+								<button class = "btn btn-default">Applay Filter</button>
+<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row charts chartsDepreciation">
+						<div class="col-lg-12 col-md-12 co-sm-12 col-xs-12">
+							<div class='row chartsPart'>
+									<div class="detailsdiv">
+										<button>Full Screen</button>
+										<img src="img\Icons\Dashboard/question.png" alt="">
+										<img src="img\Icons\Dashboard/export.png" alt="">
+									</div>
+								<div class=" col-lg-6 col-md-12 col-sm-12 col-xs-6">
+									<div id="supplay&Demand" style="width:100%;">
+									</div>
+<div class="empaty-small"></div>								
+									
+								</div>
+								<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+									<table class="table">
+										<tr >
+											<td style="border-top-color: white;">Year</td>
+											<td style="border-top-color: white;" class="pull-right">2012</td>
+										</tr>
+										<tr>
+											<td>Demand Proce</td>
+											<td>RM 223,000</td>
+										</tr>
+										<tr>
+											<td>Market Average Price</td>
+											<td>RM 180,000</td>
+										</tr>
+										<tr>
+											<td>Maximum Price</td>
+											<td>RM 200,000</td>
+										</tr>
+										<tr>
+											<td>Minimum Price</td>
+											<td>RM 750,000</td>
+										</tr>
+										<tr>
+											<td>Average Demand per Day</td>
+											<td>45</td>
+										</tr>
+<div class="clear"></div>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<div id="supplay&Demand1">
+
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6  chartsPart">
+							<div id="supplay&Demand2">
+
+							</div>
+						</div>
+<div class="clear"></div>
+					</div>
+
+					<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<div id="supplay&Demand3">
+
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<div id="supplay&Demand4">
+							</div>
+						</div>
+<div class="clear"></div>
+					</div>
+
+					<div class="row charts variantDiv">
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<div id="supplay&Demand5">
+
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-6 chartsPart">
+							<div id="supplay&Demand6">
+							</div>
+						</div>
+<div class="clear"></div>
+					</div>
+				</div>	
+<div class="clear"></div>		
+			</div>
+<div class="clear"></div>
+		</div>
+<div class="clear"></div>
+	</div>
+
+
+
+
+
+
+
+	<div class="container-fluid makeDecisions">
+			<div class="container">
+<div class="empaty-large"></div>
+<div class="empaty-large"></div>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-offset-xs-2">
+						<h2>Make smarter decisions today.</h2>
+					</div>
+				</div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  message">
+									<input type="name" class="form-control pull-left" id="exampleInputEmail3" placeholder="Name">
+									<input type="company" class="form-control pull-left" id="exampleInputEmail3" placeholder="Company">
+									<input type="email" class="form-control pull-left" id="exampleInputEmail3" placeholder="Email">
+									<textarea class="form-control" rows="5" placeholder="New Message"></textarea>
+									<div>
+										<img src="img/Functional/SendEmail.png" alt="sent message">
+									</div>
+								</div>
+							</div>
+<div class="clear"></div>
+						</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 lightLogo">
+								<a class="navbar-brand" href="#"><img src="img/iCarDataLight.png" alt="Logo Light" ></a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>FEATURES</p>
+								<ul>
+									<li><a href="#">Market Demand</a></li>
+									<li><a href="#">Pricing & Deprecatio</a>n</li>
+									<li><a href="#">Geolocation</a></li>
+									<li><a href="#">Market Reports</a> </li>
+								</ul>
+							</div>
+
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>COMPANY</p>
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Careers</a></li>
+									<li><a href="#">Press Room</a></li>
+									<li><a href="#">Investor Relations</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<p>RESOURCES</p>
+								<ul>
+									<li><a href="#">Help Center</a></li>
+									<li><a href="#">Personal Data Protection</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>	
+<div class="clear"></div>				
+				</div>
+ <div class="empaty-xl"></div>
+<div class="empaty-xl"></div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-4 copy-right">
+					</div>
+					<div class="col-lg-4 col-lg-offset-4 col-md-6  col-sm-6  col-xs-4 col-xs-offset-4  conditions">
+						<p ><a href="">Terms & Conditions·  Privacy Policy</a></p>
+					</div>
+				</div>
+<div class="empaty-large"></div>
+			</div>
+		</div>
+		
+
+	
+  <script src="js/script_search.js"></script> 
+ <script>
+    $(document).ready(function(){
+        /*date and copy right*/
+  		var date=new Date(),
+        year = date.getFullYear(),
+       	text = "Copyright " + year + " iCarData.com. All rights reserved.";
+	        
+        $('.copy-right').html('<p class="text-align-left">' + text + '</p>');
+        /*choose subscribe method*/
+
+		$('.payPer').on('click', function(){
+		    $('.annualSubscribe.activePayAnnual').removeClass('activePayAnnual');
+		    $(this).addClass('activePayAnnual');
+		});
+
+	    $('.annualSubscribe').on('click', function(){
+			$('.payPer.activePayAnnual').removeClass('activePayAnnual');
+			$(this).addClass('activePayAnnual');
+		});
+
+        /*select model*/
+		$('.selectModel').on('click', function(){
+			$('.selectvar.selectMV').removeClass('selectMV');
+			$(this).addClass('selectMV');
+		});
+
+	    $('.selectVariant').on('click', function(){
+			$('.selectModel.selectMV').removeClass('selectMV');
+			$(this).addClass('selectMV');
+		});
+
+(function (H) {
+    H.wrap(H.seriesTypes.column.prototype, 'translate', function (proceed) {
+        var options = this.options,
+            rTopLeft = options.borderRadiusTopLeft || 0,
+            rTopRight = options.borderRadiusTopRight || 0,
+            rBottomRight = options.borderRadiusBottomRight || 0,
+            rBottomLeft = options.borderRadiusBottomLeft || 0;
+
+        proceed.call(this);
+
+        if (rTopLeft || rTopRight || rBottomRight || rBottomLeft) {
+            H.each(this.points, function (point) {
+                var shapeArgs = point.shapeArgs,
+                    w = shapeArgs.width,
+                    h = shapeArgs.height,
+                    x = shapeArgs.x,
+                    y = shapeArgs.y;
+                point.shapeType = 'path';
+                point.shapeArgs = [
+                    'M', x + rTopLeft, y,
+                    // top side
+                    'L', x + w - rTopRight, y,
+                    // top right corner
+                    'C', x + w - rTopRight / 2, y, x + w, y + rTopRight / 2, x + w, y + rTopRight,
+                    // right side
+                    'L', x + w, y + h - rBottomRight,
+                    // bottom right corner
+                    'C', x + w, y + h - rBottomRight / 2, x + w - rBottomRight / 2, y + h, x + w - rBottomRight, y + h,
+                    // bottom side
+                    'L', x + rBottomLeft, y + h,
+                    // bottom left corner
+                    'C', x + rBottomLeft / 2, y + h, x, y + h - rBottomLeft / 2, x, y + h - rBottomLeft,
+                    // left side
+                    'L', x, y + rTopLeft,
+                    // top left corner
+                    'C', x, y + rTopLeft / 2, x + rTopLeft / 2, y, x + rTopLeft, y,
+                    'Z'
+                ];
+                    
+            });
+        }
+    });
+}(Highcharts));
+
+
+Highcharts.chart('supplay&Demand', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '<p style="text-decoration:underline; font-family: AvenirNextLTProMedium; font-size:17px">Supply & Demand of Audi A4 2012</p>',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -20,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        color: '#AFAFBB',
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: 'No of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,29.5,40],
+        
+    },  
+   {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,32,11],
+
+    },
+
+
+    {
+        name: 'No. of Listings',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+
+Highcharts.chart('supplay&Demand1', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '<p style="text-decoration:underline; font-family: AvenirNextLTProMedium; font-size:17px">Supply & Demand of Audi A4</p>',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -20,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: 'No of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,29.5,40],
+        
+    },  
+   {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,32,11],
+
+    },
+
+
+    {
+        name: 'No. of Listings',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+
+Highcharts.chart('supplay&Demand2', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '<p style="text-decoration:underline; font-family: AvenirNextLTProMedium; font-size:17px">Supply & Demand of Audi A6</p>',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -20,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: 'No of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,29.5,40],
+        
+    },  
+   {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,32,11],
+
+    },
+
+
+    {
+        name: 'No. of Listings',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+
+Highcharts.chart('supplay&Demand3', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '<p style="text-decoration:underline; font-family: AvenirNextLTProMedium; font-size:17px">Supply & Demand of Audi A5</p>',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -20,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: 'No of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,29.5,40],
+        
+    },  
+   {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,32,11],
+
+    },
+
+
+    {
+        name: 'No. of Listings',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+Highcharts.chart('supplay&Demand4', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '<p style="text-decoration:underline; font-family: AvenirNextLTProMedium; font-size:17px">Supply & Demand of Audi A8</p>',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -20,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: 'No of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,29.5,40],
+        
+    },  
+   {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,32,11],
+
+    },
+
+
+    {
+        name: 'No. of Listings',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+Highcharts.chart('supplay&Demand5', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '<p style="text-decoration:underline; font-family: AvenirNextLTProMedium; font-size:17px">Supply & Demand of Audi R8</p>',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -20,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: 'No of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,29.5,40],
+        
+    },  
+   {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,32,11],
+
+    },
+
+
+    {
+        name: 'No. of Listings',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+Highcharts.chart('supplay&Demand6', {
+    chart: {
+        zoomType: 'xy',
+        marginTop:100
+    },
+    title: {
+        text: '<p style="text-decoration:underline; font-family: AvenirNextLTProMedium; font-size:17px">Supply & Demand of Audi RS</p>',
+        align:"left"
+    },
+     subtitle: {
+        text: '',
+        align:"left"
+       
+    },
+    
+    xAxis: [{
+        categories: ['15k','<p style="color:#009c63;font-weight:600">'+'35k'+'</p>', '55k'],
+    }],
+    yAxis: [{ // Primary yAxis
+    	title: {
+        	text: '',
+    	},
+        labels: {
+            format: '{value}',
+            
+        },
+       
+    }, 
+
+
+    { // Secondary yAxis
+        
+        title: {
+            text: '',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        
+        labels: {
+            
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+   
+       
+    }],
+    legend:{
+        layout: 'horizontal',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -20,
+        y: 30,
+        floating: true,
+        borderWidth:0,
+        
+    },
+    tooltip: {
+        headerFormat: '<b>Average Market Price</b><br>',
+        pointFormat: 'RM {point.y}k'
+    },
+     credits: {
+        enabled: false
+    },
+    
+    
+    series: [
+   
+    {
+        name: 'No of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:10,
+        data: [9.2,29.5,40],
+        
+    },  
+   {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'#009c63',
+        yAxis: 1,
+        width:10,
+        data: [0,{y:36.4, color:'#009c63'},0,],
+        
+    },  
+    {
+        name: 'No. of CTR',
+        type: 'column',
+        borderRadiusTopLeft: 5,
+        borderRadiusTopRight: 5,
+        borderColor:'#403e5b',
+        color:'white',
+        yAxis: 1,
+        width:2,
+        data: [13,32,11],
+
+    },
+
+
+    {
+        name: 'No. of Listings',
+        type: 'line',
+        color:'#403e5b',
+        data: [10,20,8],
+        
+    }]
+       
+});
+
+
+})
+
+
+
+ </script>
+</body>
+</html>
